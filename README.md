@@ -28,7 +28,7 @@ Ref: orders.car_id > cars.id
 ```
 
 # API
-** get all **
+**get all**
 ## Link
 ```
 http://localhost:3000/v1/cars
@@ -60,7 +60,7 @@ http://localhost:3000/v1/cars
     }
 ]
 
-** create **
+**create**
 ## Link
 ```
 http://localhost:3000/v1/cars/create
@@ -89,7 +89,7 @@ updated_at: 2024-07-21
     "id": 3
 }
 
-** update **
+**update**
 ## Link
 ```
 http://localhost:3000/v1/cars/2
@@ -108,7 +108,7 @@ updated_at: 2024-07-22
 ## Response body
 1
 
-** getById **
+**getById**
 ## Link
 ```
 http://localhost:3000/v1/cars/2
@@ -129,7 +129,7 @@ http://localhost:3000/v1/cars/2
     }
 ]
 
-** delete **
+**delete**
 ## Link
 ```
 http://localhost:3000/v1/cars/3
