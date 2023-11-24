@@ -12,7 +12,10 @@ export async function up(knex: Knex): Promise<void> {
     table.date("start_rent").notNullable();
     table.date("finish_rent").notNullable();
     table.timestamp("created_at").notNullable();
+    table.foreign('created_user_id').references('user.id')
     table.timestamp("updated_at").notNullable();
+    table.foreign('updated_user_id').references('user.id')
+    table.foreign('deleted_user_id').references('user.id')
     // table.increments("id").primary();
     // table.string("plate", 10).notNullable();
     // table.string("manufacture", 100).notNullable();

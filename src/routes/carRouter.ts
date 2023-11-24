@@ -3,11 +3,12 @@ import express from 'express'
 const router = express.Router();
 const carController = require("./../controllers/carControllers")
 const upload = require("../middleware/upload");
+const userController = require("./../controllers/userControllers")
 
-router.get("/", carController.get);
-router.get("/:id", carController.getById)
-router.post("/create", upload.single("photo"), carController.post);
-router.put("/:id", upload.single("photo"), carController.updateById);
-router.delete("/:id", carController.deleteById);
+router.get("/", userController.isAdmin, carController.get);
+router.get("/:id", userController.isAdmin, carController.getById)
+router.post("/create", upload.single("photo"), userController.isAdmin, carController.post);
+router.put("/:id", upload.single("photo"), userController.isAdmin, carController.updateById);
+router.delete("/:id", userController.isAdmin, carController.deleteById);
 
 module.exports = router;
