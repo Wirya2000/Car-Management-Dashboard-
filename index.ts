@@ -5,6 +5,7 @@ import { Model } from "objection";
 const isAdmin = require('./src/middleware/isAdmin')
 const handleLogger = require('./src/middleware/handlerLogger')
 const carRouter = require('./src/routes/carRouter')
+const userRouter = require('./src/routes/userRouter')
 const app:Express = express()
 const PORT = 3000
 
@@ -27,6 +28,7 @@ app.use(express.urlencoded())
 app.use(handleLogger)
 // app.use(isAdmin)
 app.use("/v1/cars", carRouter)
+app.use("/v1/users", userRouter)
 
 app.listen(PORT, () => {
   console.log(`is listening to port ${PORT}`)

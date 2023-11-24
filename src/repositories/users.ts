@@ -1,17 +1,19 @@
 import { UserModel } from "../models/Users";
 
 interface Payload {
+    name?: string;
     email: string;
     password?: string;
 }
 
 export default class UserRepository {
     async post(param: Payload){
+        const name = param.name;
         const email  = param.email;
         const password  = param.password;
         const role = "m"
 
-        return await UserModel.query().insert({email, password, role}).returning("*"); 
+        return await UserModel.query().insert({name, email, password, role}).returning("*"); 
     };
 
     async postAdmin(param: Payload){

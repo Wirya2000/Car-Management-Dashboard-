@@ -17,6 +17,7 @@ const createToken = (payload: UserPayload) => {
 
 // add new user to user table database;
 const register = async (req: Request, res: Response)=> {
+    const name:string = req.body.name
     const email = req.body.email;
     const password = req.body.password || "";
     
@@ -24,7 +25,7 @@ const register = async (req: Request, res: Response)=> {
     const encryptedPassword = await encryptPassword(password);
     
     // silahkan teman2 explore lebih lanjut seputar database creation new row in table users
-    await new UserService().post({email, password: encryptedPassword})
+    await new UserService().post({name, email, password: encryptedPassword})
 
     // silahkan explore untuk condition jika register gagal maka akan return json xxxxxx. 
     return res.json({
@@ -80,10 +81,13 @@ const getUserProfile = async (req:Request, res: Response) => {
   try {
     const bearerToken = req.headers.authorization;
     const token = bearerToken?.split("Bearer ")?.[1] || "";
-    return JSON.parse(Buffer.from(token.split('.')[1], 'base64').toString());
+    // return JSON.parse(Buffer.from(token.split('.')[1], 'base64').toString());
+    return res.json({
+      user: JSON.parse(Buffer.from(token.split('.')[1], 'base64').toString())
+    })
   } catch(error) {
     res.status(401).json({
-      message: "Unauthorized"
+      message: "gagal"
     }) 
   }
 }
@@ -116,6 +120,7 @@ const isSuperAdmin = async (req:Request, res: Response) => {
 
     // @ts-ignore
     const users = await new UserService().getById(tokenPayload.user_id);
+    // @ts-ignore
     if(users?.role == "sa") {
       // @ts-ignore
       next()
@@ -139,6 +144,7 @@ const isAdmin = async (req:Request, res: Response) => {
 
     // @ts-ignore
     const users = await new UserService().getById(tokenPayload.user_id);
+    // @ts-ignore
     if(users?.role == "sa" || users?.role == "a") {
       // @ts-ignore
       next()
@@ -175,5 +181,6 @@ module.exports = {
     getUserProfile, 
     authorize,
     isSuperAdmin,
-    editRoleToAdmin
+    editRoleToAdmin,
+    isAdmin
 }

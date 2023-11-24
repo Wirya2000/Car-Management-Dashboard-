@@ -1,6 +1,7 @@
 import UserRepository from "../repositories/users";
 
 interface Payload {
+    name?: string;
     email: string; 
     password?: string;
 }

@@ -6,8 +6,8 @@ const upload = require("../middleware/upload");
 
 
 router.get("/admin/add", userController.isSuperAdmin, userController.editRoleToAdmin);
-router.get("/userProfile", userController.authorize,userController.getUserProfile) // semua role
-router.post("/register", userController.register); // => Semua role , default role  = member;
-router.post("/login", userController.login); // => semua role 
+router.get("/userProfile", userController.authorize, userController.getUserProfile) // semua role
+router.post("/register", upload.none(), userController.register); // => Semua role , default role  = member;
+router.post("/login", upload.none(), userController.login); // => semua role 
 
 module.exports = router;

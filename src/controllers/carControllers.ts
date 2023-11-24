@@ -1,5 +1,6 @@
 import {Request, Response} from 'express'
 import CarService from '../services/cars'
+const userController = require("./../controllers/userControllers")
 
 const get = async (res: Response)=> {
   // const getCars = await CarsModel.query() || [];
@@ -20,7 +21,8 @@ const get = async (res: Response)=> {
 }
 
 const post = async (req: Request, res: Response)=> {
-  new CarService().post(req).then((response) => {
+  const user = userController.getUserProfile
+  new CarService().post(req, user).then((response) => {
     console.log({response})
     res.status(200).json({
       message: "success",
@@ -50,7 +52,8 @@ const getById = async (req: Request, res: Response) => {
 }
 
 const deleteById = async (req:Request, res: Response) => {
-  new CarService().deleteById(req).then((response) => {
+  const user = userController.getUserProfile
+  new CarService().deleteById(req, user).then((response) => {
     console.log({response})
     res.status(200).json({
       message: "success",
@@ -65,7 +68,8 @@ const deleteById = async (req:Request, res: Response) => {
 }
 
 const updateById = async (req:Request, res: Response) => {
-  new CarService().updateById(req).then((response) => {
+  const user = userController.getUserProfile
+  new CarService().updateById(req, user).then((response) => {
     console.log({response})
     res.status(200).json({
       message: "success",
