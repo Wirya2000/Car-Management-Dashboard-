@@ -1,0 +1,261 @@
+.btn-green {
+  display: inline-flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2px;
+  background: var(--primary-lime-green-04, #5CB85F);
+  color: #FFFFFF;
+}
+
+.logo {
+  width: 100px;
+  height: 34px;
+  flex-shrink: 0;
+  background: var(--primary-dark-blue-04, #0D28A6);
+}
+
+.header {
+  /* height: 500px; */
+  /* width: 1440px; */
+  /* width: 100%; */
+  background-color: #F1F3FF;;
+}
+
+.title-container {
+  /* float: left; */
+  /* margin-left: 136px; */
+}
+
+.text-title {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 36px;
+  /* font-size: 2.6vw; */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 54px */
+}
+
+.app-description {
+  max-width: 468px;
+  margin-top: 16px;
+}
+
+.car-image-container {
+  /* width: 704px; */
+  /* height: 407px; */
+  flex-shrink: 0;
+  /* margin-top: auto; */
+  margin-bottom: 0px;
+  /* position: absolute; */
+  margin-right: 0px;
+  /* margin-left: 32px; */
+  /* float: right; */
+}
+
+.car-image {
+  background: lightgray -35.507px -65px / 107.104% 123.096% no-repeat;
+}
+
+.btn-sewa-mobil {
+  margin-top: 16x;
+}
+
+.service-image {
+  max-width: 459px;
+  max-height: 428px;
+  width: 100%;
+  /* flex-shrink: 0; */
+}
+
+.article-our-service-container {
+  max-width: 1027px;
+  /* height: 428px; */
+  /* margin-left: 206px; */
+  /* margin-top: 104px; */
+}
+
+.our-service-text-container {
+  max-width: 468px;
+  /* height: 356px; */
+  /* margin-left: 100px; */
+  /* float: right; */
+  margin-top: 36px;
+}
+
+.sub-judul {
+  color: #000;
+  /* Heading/24/Bold */
+  font-family: Helvetica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 150% */
+  margin: 0px;
+}
+
+.text-content-light {
+  color: #000;
+  /* Body/14/Light */
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 142.857% */
+}
+
+.text-content {
+  color: #000;
+
+  /* Body/14/Regular */
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.our-service-desc {
+  color: #000;
+  /* Body/14/Light */
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 142.857% */
+  margin-top: 24px;
+  margin-bottom: 0px;
+}
+
+#remove-bullet {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-ellipse {
+  position: relative; 
+  top: 0px; 
+  bottom: 0px;
+}
+
+.icon-check {
+  position: relative; 
+  /* top: px;  */
+  bottom: 0px; 
+  left: -24px;
+}
+
+.our-service-list {
+  /* margin:0px 0px 0px 16px;  */
+  margin:0px 0px 0px -1em; 
+  display:inline;
+}
+
+.our-service-li {
+  /* margin: 16px 0px 0px 0px; */
+}
+
+.why-us-container {
+  max-width: 1168px;
+  /* height: 308px; */
+  flex-shrink: 0;
+  /* margin: 8em auto 0px auto; */
+}
+
+.card-why-us-container {
+  /* max-width: 16.84em; */
+  padding: 24px;
+}
+
+.card-image-text {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.testimonial-container {
+  max-width: 1921px;
+  /* height: 438px; */
+  flex-shrink: 0;
+
+  /* margin-top: 100px; */
+}
+
+.testimonial-content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-left: 46px;
+}
+
+.bintang {
+  display: flex;
+  align-items: flex-start;
+}
+
+.banner-container {
+  /* width: 1168px; */
+  /* height: 326px; */
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: var(--primary-dark-blue-04, #0D28A6);
+  margin: 0px auto 0px auto;
+}
+
+.footer {
+  max-width: 1141px;
+  height: 128px;
+}
+
+.text-cari{
+  color: #000;
+  /* Body/14/Light */
+  font-family: Helvetica;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 142.857% */
+}
+
+/* Testimonial section */
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+.connect-with-us {
+  margin-right: 16px;
+}
