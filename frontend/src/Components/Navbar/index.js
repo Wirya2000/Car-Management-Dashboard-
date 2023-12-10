@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Offcanvas, Container } from 'react-bootstrap';
-import OffcanvasNavbar from '../offcanvasNavbar';
+import OffcanvasNavbar from '../OffcanvasNavbar';
 
 const NavbarCustom = () => {
   return (
