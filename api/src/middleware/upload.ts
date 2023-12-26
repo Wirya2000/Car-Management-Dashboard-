@@ -1,4 +1,5 @@
-const multer = require('multer');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const multer = require("multer");
 // const path = require('path');
 
 // const publicDir = path.join(__dirname, "./../../public");
