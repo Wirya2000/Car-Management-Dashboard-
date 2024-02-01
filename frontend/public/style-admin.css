@@ -1,0 +1,33 @@
+.bg-blue {
+    background-color: #0D28A6;
+}
+.bg-blue-2 {
+    background-color: #CFD4ED !important;
+}
+.bg-grey {
+    background-color: #F4F5F7;
+}
+.nav-pills .nav-link {
+    border-radius: 0 !important;
+}
+a.sidebar.active {
+    background-color: #5568C1 !important;
+}
+a.menu.active {
+    background-color: #CFD4ED !important;
+}
+.lh-0 {
+    line-height: 0 !important;
+}
+.fs-12 {
+    font-size: 12.5px;
+}
+.fs-14 {
+    font-size: 14.5px;
+}
+.fs-20 {
+    font-size: 19.5px;
+}
+.btn-jump-page:hover {
+    background-color: #0D28A6 !important;
+}
